@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCStatusLib", "PCStatusLib\PCStatusLib.csproj", "{D8A80287-1CDD-442E-8881-7C52DE11258B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SandBoxConsole", "SandBoxConsole\SandBoxConsole.csproj", "{5FB7E137-33ED-4227-A8AB-515A3B1EB881}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D8A80287-1CDD-442E-8881-7C52DE11258B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8A80287-1CDD-442E-8881-7C52DE11258B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8A80287-1CDD-442E-8881-7C52DE11258B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8A80287-1CDD-442E-8881-7C52DE11258B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FB7E137-33ED-4227-A8AB-515A3B1EB881}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FB7E137-33ED-4227-A8AB-515A3B1EB881}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FB7E137-33ED-4227-A8AB-515A3B1EB881}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FB7E137-33ED-4227-A8AB-515A3B1EB881}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3C244849-2998-4D29-AE34-3BBF29C0B0DF}
+	EndGlobalSection
+EndGlobal

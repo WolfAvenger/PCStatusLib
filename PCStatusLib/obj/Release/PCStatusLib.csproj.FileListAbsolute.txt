@@ -1,0 +1,6 @@
+C:\Users\user\Desktop\PCStatusLib\PCStatusLib\bin\Release\PCStatusLib.dll
+C:\Users\user\Desktop\PCStatusLib\PCStatusLib\bin\Release\PCStatusLib.pdb
+C:\Users\user\Desktop\PCStatusLib\PCStatusLib\obj\Release\PCStatusLib.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\PCStatusLib\PCStatusLib\obj\Release\PCStatusLib.dll
+C:\Users\user\Desktop\PCStatusLib\PCStatusLib\obj\Release\PCStatusLib.pdb
+C:\Users\user\Desktop\PCStatusLib\PCStatusLib\obj\Release\PCStatusLib.csprojAssemblyReference.cache

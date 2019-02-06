@@ -1,0 +1,10 @@
+C:\Users\user\Desktop\PCStatusLib\SandBoxConsole\bin\Release\SandBoxConsole.exe.config
+C:\Users\user\Desktop\PCStatusLib\SandBoxConsole\bin\Release\SandBoxConsole.exe
+C:\Users\user\Desktop\PCStatusLib\SandBoxConsole\bin\Release\SandBoxConsole.pdb
+C:\Users\user\Desktop\PCStatusLib\SandBoxConsole\bin\Release\PCStatusLib.dll
+C:\Users\user\Desktop\PCStatusLib\SandBoxConsole\bin\Release\PCStatusLib.pdb
+C:\Users\user\Desktop\PCStatusLib\SandBoxConsole\obj\Release\SandBoxConsole.csprojAssemblyReference.cache
+C:\Users\user\Desktop\PCStatusLib\SandBoxConsole\obj\Release\SandBoxConsole.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\PCStatusLib\SandBoxConsole\obj\Release\SandBoxConsole.csproj.CopyComplete
+C:\Users\user\Desktop\PCStatusLib\SandBoxConsole\obj\Release\SandBoxConsole.exe
+C:\Users\user\Desktop\PCStatusLib\SandBoxConsole\obj\Release\SandBoxConsole.pdb

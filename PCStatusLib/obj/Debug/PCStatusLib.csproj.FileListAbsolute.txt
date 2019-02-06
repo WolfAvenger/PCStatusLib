@@ -1,0 +1,12 @@
+C:\Users\Semyon\Desktop\PCStatusLib\PCStatusLib\bin\Debug\PCStatusLib.dll
+C:\Users\Semyon\Desktop\PCStatusLib\PCStatusLib\bin\Debug\PCStatusLib.pdb
+C:\Users\Semyon\Desktop\PCStatusLib\PCStatusLib\obj\Debug\PCStatusLib.csprojAssemblyReference.cache
+C:\Users\Semyon\Desktop\PCStatusLib\PCStatusLib\obj\Debug\PCStatusLib.csproj.CoreCompileInputs.cache
+C:\Users\Semyon\Desktop\PCStatusLib\PCStatusLib\obj\Debug\PCStatusLib.dll
+C:\Users\Semyon\Desktop\PCStatusLib\PCStatusLib\obj\Debug\PCStatusLib.pdb
+C:\Users\user\Desktop\PCStatusLib\PCStatusLib\bin\Debug\PCStatusLib.dll
+C:\Users\user\Desktop\PCStatusLib\PCStatusLib\bin\Debug\PCStatusLib.pdb
+C:\Users\user\Desktop\PCStatusLib\PCStatusLib\obj\Debug\PCStatusLib.csprojAssemblyReference.cache
+C:\Users\user\Desktop\PCStatusLib\PCStatusLib\obj\Debug\PCStatusLib.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\PCStatusLib\PCStatusLib\obj\Debug\PCStatusLib.dll
+C:\Users\user\Desktop\PCStatusLib\PCStatusLib\obj\Debug\PCStatusLib.pdb
