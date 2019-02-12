@@ -19,8 +19,8 @@ namespace SandBoxConsole
     }
 	class Program
 	{
-
         static double sec = 0;
+
         static void ProcessorsOverloadTracing()
         {
             PerformanceCounter pc = new PerformanceCounter("Процессор", "% загруженности процессора", "_Total");
@@ -44,6 +44,7 @@ namespace SandBoxConsole
             }
 
         }
+
         static void NewMain()
         {
             #region Paths of files of testing
@@ -75,10 +76,14 @@ namespace SandBoxConsole
 
         static void SerializingData()
         {
-            ThreadStart s1 = new ThreadStart(SerializedActiveProcesses);
-            s1 += SerializedSystemInfo; s1 += SerializedAvailibleMemory; s1 += SerializedProcessorsInfo;
-            ThreadStart s2 = new ThreadStart(SerializedDisksInfo);
-            s2 += SerializedProcessorActivity; s2 += SerializedVideoConrollersInfo; s2 += SerializedInstalledSoft;
+            ThreadStart s1 = new ThreadStart(SerializableInfo.SerializedActiveProcesses);
+            s1 += SerializableInfo.SerializedSystemInfo;
+            s1 += SerializableInfo.SerializedAvailibleMemory;
+            s1 += SerializableInfo.SerializedProcessorsInfo;
+            ThreadStart s2 = new ThreadStart(SerializableInfo.SerializedDisksInfo);
+            s2 += SerializableInfo.SerializedProcessorActivity;
+            s2 += SerializableInfo.SerializedVideoConrollersInfo;
+            s2 += SerializableInfo.SerializedInstalledSoft;
 
             Thread[] t_s = new Thread[] { new Thread(s1), new Thread(s2) };
             TimerCallback call = new TimerCallback(Tick);
@@ -251,124 +256,7 @@ namespace SandBoxConsole
         #endregion
 
         #region Serialized TestTasks
-        static void SerializedAvailibleMemory()
-        {
-            string path7 = @"../../Physical Memory.txt";
-            string path8 = @"../../Virtual Memory.txt";
-            Charge el = Charge.B;
-            BinaryFormatter formatter = new BinaryFormatter();
-            using (FileStream s1 = new FileStream(path7, FileMode.Create))
-            {
-                formatter.Serialize(s1, PCStatus.AvailablePhysicalMemory(3) + " " + (el + 3).ToString());
-            }
-            using (FileStream s2 = new FileStream(path8, FileMode.Create))
-            {
-                formatter.Serialize(s2, PCStatus.AvailibleVirtualMemory(3) + " " + (el + 3).ToString());
-            }
 
-            Console.WriteLine("SerializedAvailibleMemory() done at {0} sec", Math.Round(sec, 1));
-        }
-
-        static void SerializedActiveProcesses()
-        {
-            string file = @"../../Active Processes.txt";
-            List<string> list = PCStatus.ActiveProcesses();
-            FileStream s1 = new FileStream(file, FileMode.Create);
-            BinaryFormatter formatter = new BinaryFormatter();
-            using (s1)
-            {
-                formatter.Serialize(s1, list);
-            }
-            Console.WriteLine($"SerializedActiveProcesses() done at {Math.Round(sec, 1)} sec");
-        }
-
-        static void SerializedInstalledSoft()
-        {
-            string file = @"../../Installed Soft.txt";
-            FileStream s1 = new FileStream(file, FileMode.Create);
-            ProgramSoft[] arr = PCStatus.InstalledSoft().ToArray<ProgramSoft>();
-            Array.Sort<ProgramSoft>(arr, (a, b) => a.Softname.CompareTo(b.Softname));
-            List<ProgramSoft> list = new List<ProgramSoft>(arr);
-            BinaryFormatter formatter = new BinaryFormatter();
-            using (s1)
-            {
-                formatter.Serialize(s1, list);
-            }
-            Console.WriteLine($"SerializedInstalledSoft() done at {Math.Round(sec, 1)} sec");
-        }
-
-        static void SerializedSystemInfo()
-        {
-            string file = @"../../System Info.txt";
-            FileStream s1 = new FileStream(file, FileMode.Create);
-            BinaryFormatter formatter = new BinaryFormatter();
-            
-            using (s1)
-            {
-                formatter.Serialize(s1, PCStatus.SystemInfo());
-            }
-
-            Console.WriteLine($"SerializedSystemInfo() done at {Math.Round(sec, 1)} sec");
-        }
-
-        static void SerializedDisksInfo()
-        {
-            string file = @"../../Disks Info.txt";
-            FileStream s1 = new FileStream(file, FileMode.Create);
-            List<DiskInfo> list = PCStatus.DisksInfo();
-            BinaryFormatter formatter = new BinaryFormatter();
-
-            using (s1)
-            {
-                formatter.Serialize(s1, list);
-            }
-            Console.WriteLine($"SerializedDisksInfo() done at {Math.Round(sec, 1)} sec");
-        }
-
-        static void SerializedVideoConrollersInfo()
-        {
-            string file = @"../../Video Controllers Info.txt";
-            FileStream s1 = new FileStream(file, FileMode.Create);
-            BinaryFormatter formatter = new BinaryFormatter();
-
-            List<VideoControllerInfo> list = PCStatus.VideoControllersInfo();
-            
-            using (s1)
-            {
-                formatter.Serialize(s1, list);
-            }
-
-            Console.WriteLine($"SerializedVideoConrollersInfo() done at {Math.Round(sec, 1)} sec");
-        }
-
-        static void SerializedProcessorsInfo()
-        {
-            string file = @"../../Processors Info.txt";
-            FileStream s1 = new FileStream(file, FileMode.Create);
-            List<ProcessorInfo> list = PCStatus.ProcessorsInfo();
-            BinaryFormatter formatter = new BinaryFormatter();
-
-            using (s1)
-            {
-                formatter.Serialize(s1, list);
-            }
-
-            Console.WriteLine($"Serialized" +
-                $"ProcessorsInfo() done at {Math.Round(sec, 1)} sec");
-        }
-
-        static void SerializedProcessorActivity()
-        {
-            string file = @"../../Processor Activity.txt";
-            FileStream s1 = new FileStream(file, FileMode.Create);
-            BinaryFormatter formatter = new BinaryFormatter();
-
-            using (s1)
-            {
-                formatter.Serialize(s1, PCStatus.CPULoad());
-            }
-            Console.WriteLine($"SerializedProcessorActivity() done at {Math.Round(sec, 1)} sec");
-        }
 
         #endregion
 
