@@ -260,19 +260,6 @@ namespace SandBoxConsole
 
         #endregion
 
-        static string DeserializedProcessorActivity()
-        {
-            string file = @"../../Processor Activity.txt";
-            FileStream s1 = new FileStream(file, FileMode.Open);
-            BinaryFormatter formatter = new BinaryFormatter();
-            string received = String.Empty;
 
-            using (s1)
-            {
-                received = (string)formatter.Deserialize(s1);
-            }
-
-            return received;
-        }
     }
 }
