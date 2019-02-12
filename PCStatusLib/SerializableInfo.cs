@@ -1,14 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Management;
-using Microsoft.VisualBasic.Devices;
-using System.Diagnostics;
-using System.Threading;
-using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
+using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace PCStatusLib
 {

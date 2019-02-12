@@ -1,18 +1,15 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.Devices;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Management;
-using Microsoft.VisualBasic.Devices;
 using System.Diagnostics;
-using System.Threading;
+using System.Linq;
+using System.Management;
 
 namespace PCStatusLib
 {
-	/// <summary>
-	/// Статический класс, содержащий методы для вывода различной информации о состоянии ПК.
-	/// </summary>
+    /// <summary>
+    /// Статический класс, содержащий методы для вывода различной информации о состоянии ПК.
+    /// </summary>
     public static class PCStatus
     {
 		/// <summary>
@@ -269,6 +266,9 @@ namespace PCStatusLib
             return ret;
         }
     }
+
+    ///TODO: Make a new method in each class to serialize info
+
 
     #region Classes
 

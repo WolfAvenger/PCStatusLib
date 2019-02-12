@@ -1,15 +1,10 @@
-﻿using System;
+﻿using PCStatusLib;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Management;
-using System.Threading;
 using System.Diagnostics;
-using PCStatusLib;
 using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
-using Microsoft.VisualBasic.Devices;
+using System.Linq;
+using System.Threading;
 
 namespace SandBoxConsole
 {
@@ -137,8 +132,8 @@ namespace SandBoxConsole
         {
             //NewMain();
             //ProcessorsOverloadTracing();
-            //ThreadMain();
-            SerializingData();
+            ThreadMain();
+            //SerializingData();
         }
 
         #region TestTasks
