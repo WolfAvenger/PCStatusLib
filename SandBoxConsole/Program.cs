@@ -139,7 +139,6 @@ namespace SandBoxConsole
             //ProcessorsOverloadTracing();
             //ThreadMain();
             SerializingData();
-            Console.WriteLine(DeserializedProcessorActivity());
         }
 
         #region TestTasks
@@ -254,12 +253,5 @@ namespace SandBoxConsole
         }
 
         #endregion
-
-        #region Serialized TestTasks
-
-
-        #endregion
-
-
     }
 }
