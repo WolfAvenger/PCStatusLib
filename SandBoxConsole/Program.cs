@@ -127,12 +127,14 @@ namespace SandBoxConsole
             Console.WriteLine("All Tasks done");
             Console.Read();
         }
+
         static void Main(string[] args)
         {
             //NewMain();
             //ProcessorsOverloadTracing();
             //ThreadMain();
             SerializingData();
+            Console.WriteLine(DeserializedProcessorActivity());
         }
 
         #region TestTasks
@@ -267,7 +269,7 @@ namespace SandBoxConsole
             Console.WriteLine("SerializedAvailibleMemory() done at {0} sec", Math.Round(sec, 1));
         }
 
-        static void SerializedActiveProcesses(/*string file*/)
+        static void SerializedActiveProcesses()
         {
             string file = @"../../Active Processes.txt";
             List<string> list = PCStatus.ActiveProcesses();
@@ -280,7 +282,7 @@ namespace SandBoxConsole
             Console.WriteLine($"SerializedActiveProcesses() done at {Math.Round(sec, 1)} sec");
         }
 
-        static void SerializedInstalledSoft(/*string file*/)
+        static void SerializedInstalledSoft()
         {
             string file = @"../../Installed Soft.txt";
             FileStream s1 = new FileStream(file, FileMode.Create);
@@ -295,7 +297,7 @@ namespace SandBoxConsole
             Console.WriteLine($"SerializedInstalledSoft() done at {Math.Round(sec, 1)} sec");
         }
 
-        static void SerializedSystemInfo(/*string file*/)
+        static void SerializedSystemInfo()
         {
             string file = @"../../System Info.txt";
             FileStream s1 = new FileStream(file, FileMode.Create);
@@ -309,7 +311,7 @@ namespace SandBoxConsole
             Console.WriteLine($"SerializedSystemInfo() done at {Math.Round(sec, 1)} sec");
         }
 
-        static void SerializedDisksInfo(/*string file*/)
+        static void SerializedDisksInfo()
         {
             string file = @"../../Disks Info.txt";
             FileStream s1 = new FileStream(file, FileMode.Create);
@@ -323,7 +325,7 @@ namespace SandBoxConsole
             Console.WriteLine($"SerializedDisksInfo() done at {Math.Round(sec, 1)} sec");
         }
 
-        static void SerializedVideoConrollersInfo(/*string file*/)
+        static void SerializedVideoConrollersInfo()
         {
             string file = @"../../Video Controllers Info.txt";
             FileStream s1 = new FileStream(file, FileMode.Create);
@@ -339,7 +341,7 @@ namespace SandBoxConsole
             Console.WriteLine($"SerializedVideoConrollersInfo() done at {Math.Round(sec, 1)} sec");
         }
 
-        static void SerializedProcessorsInfo(/*string file*/)
+        static void SerializedProcessorsInfo()
         {
             string file = @"../../Processors Info.txt";
             FileStream s1 = new FileStream(file, FileMode.Create);
@@ -355,7 +357,7 @@ namespace SandBoxConsole
                 $"ProcessorsInfo() done at {Math.Round(sec, 1)} sec");
         }
 
-        static void SerializedProcessorActivity(/*string file*/)
+        static void SerializedProcessorActivity()
         {
             string file = @"../../Processor Activity.txt";
             FileStream s1 = new FileStream(file, FileMode.Create);
@@ -369,5 +371,20 @@ namespace SandBoxConsole
         }
 
         #endregion
+
+        static string DeserializedProcessorActivity()
+        {
+            string file = @"../../Processor Activity.txt";
+            FileStream s1 = new FileStream(file, FileMode.Open);
+            BinaryFormatter formatter = new BinaryFormatter();
+            string received = String.Empty;
+
+            using (s1)
+            {
+                received = (string)formatter.Deserialize(s1);
+            }
+
+            return received;
+        }
     }
 }
