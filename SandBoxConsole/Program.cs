@@ -17,7 +17,7 @@ namespace SandBoxConsole
     {
         B, KB, MB, GB, TB
     }
-	class Program
+	public class Program
 	{
 
         static double sec = 0;
@@ -44,36 +44,8 @@ namespace SandBoxConsole
             }
 
         }
-        static void NewMain()
-        {
-            #region Paths of files of testing
-            string path1 = @"../../Active Processes.txt";
-            string path2 = @"../../Installed Soft.txt";
-            string path3 = @"../../System Info.txt";
-            string path4 = @"../../Disks Info.txt";
-            string path5 = @"../../Video Controllers Info.txt";
-            string path6 = @"../../Processors Info.txt";
-            string path7 = @"../../Physical Memory.txt";
-            string path8 = @"../../Virtual Memory.txt";
-            string path9 = @"../../Processor Activity.txt"; 
-            #endregion
 
-            TimerCallback call = new TimerCallback(Tick);
-            Timer timer = new Timer(call, sec, 0, 100);
-            //ActiveProcesses(path1);
-            //InstalledSoft(path2);
-            //SystemInfo(path3);
-            //DisksInfo(path4);
-            //VideoConrollersInfo(path5);
-            //ProcessorsInfo(path6);
-            //AvailibleMemory();
-            //ProcessorActivity(path9);
-            Console.WriteLine("FINISHED");
-            timer.Change(Timeout.Infinite, Timeout.Infinite);
-            Console.Read();
-        }
-
-        static void SerializingData()
+        public static void SerializingData()
         {
             ThreadStart s1 = new ThreadStart(SerializedActiveProcesses);
             s1 += SerializedSystemInfo; s1 += SerializedAvailibleMemory; s1 += SerializedProcessorsInfo;
@@ -129,10 +101,21 @@ namespace SandBoxConsole
         }
         static void Main(string[] args)
         {
-            //NewMain();
             //ProcessorsOverloadTracing();
             //ThreadMain();
             SerializingData();
+
+            BinaryFormatter f = new BinaryFormatter();
+            FileStream s = new FileStream(@"../../Disks Info.txt", FileMode.Open);
+
+            List<DiskInfo> list = (List<DiskInfo>)f.Deserialize(s);
+            foreach (DiskInfo i in list)
+            {
+                Console.WriteLine(i.Capacity + "\n" + i.Caption);
+                Console.WriteLine("---------------");
+            }
+
+            s.Close();
         }
 
         #region TestTasks
@@ -267,7 +250,7 @@ namespace SandBoxConsole
             Console.WriteLine("SerializedAvailibleMemory() done at {0} sec", Math.Round(sec, 1));
         }
 
-        static void SerializedActiveProcesses(/*string file*/)
+        public static void SerializedActiveProcesses(/*string file*/)
         {
             string file = @"../../Active Processes.txt";
             List<string> list = PCStatus.ActiveProcesses();

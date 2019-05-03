@@ -1,0 +1,16 @@
+C:\Users\user\Desktop\PCStatusLib\Client\bin\Debug\Client.exe.config
+C:\Users\user\Desktop\PCStatusLib\Client\bin\Debug\Client.exe
+C:\Users\user\Desktop\PCStatusLib\Client\bin\Debug\Client.pdb
+C:\Users\user\Desktop\PCStatusLib\Client\bin\Debug\PCStatusLib.dll
+C:\Users\user\Desktop\PCStatusLib\Client\bin\Debug\SandBoxConsole.exe
+C:\Users\user\Desktop\PCStatusLib\Client\bin\Debug\PCStatusLib.pdb
+C:\Users\user\Desktop\PCStatusLib\Client\bin\Debug\SandBoxConsole.pdb
+C:\Users\user\Desktop\PCStatusLib\Client\bin\Debug\SandBoxConsole.exe.config
+C:\Users\user\Desktop\PCStatusLib\Client\obj\Debug\Client.csprojAssemblyReference.cache
+C:\Users\user\Desktop\PCStatusLib\Client\obj\Debug\Client.Form1.resources
+C:\Users\user\Desktop\PCStatusLib\Client\obj\Debug\Client.Properties.Resources.resources
+C:\Users\user\Desktop\PCStatusLib\Client\obj\Debug\Client.csproj.GenerateResource.cache
+C:\Users\user\Desktop\PCStatusLib\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\PCStatusLib\Client\obj\Debug\Client.csproj.CopyComplete
+C:\Users\user\Desktop\PCStatusLib\Client\obj\Debug\Client.exe
+C:\Users\user\Desktop\PCStatusLib\Client\obj\Debug\Client.pdb
